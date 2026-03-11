@@ -1,4 +1,167 @@
-#toofu {
-    width: 200px;
-    transition: transform 0.5s ease;
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600&family=Inter:wght@300;400;500&display=swap');
+
+:root {
+  --bg: #f5f7fa;
+  --surface: #ffffff;
+  --text: #1a1d27;
+  --accent: #1a1d27;
+  --accent-dim: #eff6ff;
+  --muted: #64748b;
+  --border: #e2e8f0;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+.section{
+    height : 100vh;
+    scroll-snap-align: start;
+}
+
+#page1 {
+    position: relative;
+    background-image: url('/images/kirikitr.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg);
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  gap: 12px;
+}
+
+/* overlay léger, la carte gère la lisibilité */
+#page1::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 20, 50, 0.25);
+}
+
+/* le contenu doit passer au dessus de l'overlay */
+#page1 > * {
+  position: relative;
+  z-index: 1;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 48px 56px;
+  background: rgba(5, 20, 50, 0.62);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.35);
+}
+
+#page1 h1 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  animation: fadeDown 0.8s ease both;
+}
+
+#page1 h1 span.cursor {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 300;
+  animation: blink 1s step-end infinite;
+}
+
+#page1 h2 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.02em;
+  text-align: center;
+  max-width: 560px;
+  line-height: 1.7;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
+  animation: fadeDown 0.8s ease 0.15s both;
+}
+
+.divider {
+  width: 60px;
+  height: 1px;
+  background: var(--border);
+  margin: 4px 0;
+  animation: fadeDown 0.8s ease 0.25s both;
+}
+
+#page1 .divider {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-top: 8px;
+}
+
+.logo {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+}
+
+.pdp {
+  height: 156px;
+  width: auto;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.15);
+}
+
+#page1 .pdp {
+  border-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.4);
+}
+
+.logo:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+  transform: translateY(-2px);
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
