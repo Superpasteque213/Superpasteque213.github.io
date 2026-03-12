@@ -161,6 +161,20 @@ function updatePanel(index) {
 /* Initialise avec le premier projet */
 updatePanel(0);
 
+/* Peuple les blocs de description mobile (un par slide) */
+document.querySelectorAll('.proj-slide').forEach((slide, i) => {
+  const p = projects[i];
+  if (!p) return;
+  slide.querySelector('.proj-name-m').textContent  = p.name;
+  slide.querySelector('.proj-desc-m').textContent  = p.desc;
+  slide.querySelector('.proj-link-m').href         = p.link;
+  slide.querySelector('.proj-stack-m').innerHTML   = p.stack.map(item =>
+    item.startsWith('/')
+      ? `<img src="${item}" class="proj-stack-img" alt="">`
+      : `<i class="${item}"></i>`
+  ).join('');
+});
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
