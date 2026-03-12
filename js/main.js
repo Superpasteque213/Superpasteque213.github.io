@@ -113,8 +113,18 @@ const projects = [
       'devicon-css3-plain colored',
       'devicon-javascript-plain colored',
     ],
-    desc:  "Description du second projet. Parle des choix techniques, de l'architecture mise en place et de ton rôle dans le développement.",
+    desc:  "Un site de e-commerce développé sur shopify, en binôme sur ce projet nous avons imaginé et disposé les différents éléments, customisé le css, saisis les images et les prix, et formé une partie du personnel à la maintenance du site et la gestion des commandes",
     link:  'https://pacificsecurite.nc',
+  },
+  {
+    name:  'Tradehelm',
+    stack: [
+      'devicon-fastify-plain',
+      'devicon-react-original colored',
+      'devicon-redis-plain colored',
+    ],
+    desc:  "Tradehelm est un projet développé lors du Cassini Hackathon 2025, où nous avons remporté le 1er prix en Nouvelle-Calédonie et obtenu la 5ᵉ place au classement global. Il s’agit d’un jeu multijoueur sur navigateur utilisant des données géospatiales satellites via une API pour recréer des environnements réalistes et leurs ressources. Les joueurs apparaissent sur une même planète et doivent gérer et exploiter les ressources de manière collaborative, leurs actions influençant les autres. Le jeu vise à sensibiliser à la gestion durable des ressources et aux enjeux environnementaux mondiaux.",
+    link:  'https://taikai.network/cassinihackathons/hackathons/eu-space-consumer-experience/projects/cmh890hy102pcgs2wj7v9q90k/idea',
   },
 ];
 
