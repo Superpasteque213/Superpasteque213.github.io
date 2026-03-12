@@ -5,16 +5,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Thimotée Viret</title>
         <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
         <script src="/js/main.js" defer></script>
     </head>
     <body>
-        
-        <div class="section" id="page1">
-            <div class="card">
-                <img src="/images/thim-pdp.png" class="pdp" alt="ma photo de profil">
-                <h1>Thimotée Viret<span class="cursor">_</span></h1>
-                <div class="divider"></div>
-                <h2>Étudiant en 1ère année de Master MIAGE à l'IAE Nouvelle-Calédonie</h2>
+
+        <label id="theme-toggle" aria-label="Changer de thème">
+            <input type="checkbox" id="theme-checkbox">
+            <span class="toggle-track">
+                <span class="toggle-thumb"></span>
+            </span>
+        </label>
+
+<div class="section" id="page1">
+            <img src="/images/thim-pdp.png" class="pdp" alt="ma photo de profil">
+            <h1>Thimotée Viret<span class="cursor">_</span></h1>
+            <div class="divider"></div>
+            <h2>Étudiant en 1ère année de Master MIAGE à l'IAE Nouvelle-Calédonie</h2>
+            <div class="bottom-row">
+                <a class="cv-btn" href="./images/CV-Thimotée-Viret-2026.pdf" target="_blank">Voir mon CV</a>
                 <div class="logos">
                     <img src="/images/iae-logo.png" class="logo" id="iae-logo" alt="iae-logo">
                     <img src="/images/unc-logo.jpg" class="logo" id="unc-logo" alt="unc-logo">
@@ -22,9 +31,89 @@
             </div>
         </div>
         <div class="section" id="page2">
-            <h1>A propos de moi</h1>
-            <h2>En cours de construction</h2>
-            
+            <h1>À propos de moi</h1>
+            <div class="about-body">
+                <p>Je suis Thimotée, un jeune calédonien passionné de code, spécialisé en développement backend.</p>
+                <p>Mon parcours : bac général NSI en 2022, suivi d'une Licence Informatique de 2023 à 2025, et actuellement en 1ère année de Master MIAGE à l'IAE Nouvelle-Calédonie.</p>
+                <p>Mon objectif est de consolider et développer mes compétences en développement backend et applicatif, tout en acquérant des bases solides en frontend et en administration système. Je souhaite à terme maitriser le cycle de vie d'une application pour me rapprocher d'un profil DevOps</p>
+            </div>
+        </div>
+
+        <div id="page3">
+            <div class="p3-layout">
+                <div class="p3-left">
+                    <div class="proj-slide" data-index="0">
+                        <div class="carousel">
+                            <button class="carousel-btn prev" aria-label="Image précédente">&#8249;</button>
+                            <div class="carousel-track">
+                                <img src="/images/bonus1.jpg" alt="Projet 1 - aperçu 1">
+                                <img src="/images/bonus2.png" alt="Projet 1 - aperçu 2">
+                                <img src="/images/bonus1.png" alt="Projet 1 - aperçu 3">
+                            </div>
+                            <button class="carousel-btn next" aria-label="Image suivante">&#8250;</button>
+                            <div class="carousel-dots"></div>
+                        </div>
+                    </div>
+                    <div class="proj-slide" data-index="1">
+                        <div class="carousel">
+                            <button class="carousel-btn prev" aria-label="Image précédente">&#8249;</button>
+                            <div class="carousel-track">
+                                <img src="/images/PS1.png" alt="Projet 2 - aperçu 1">
+                                <img src="/images/projet2-2.png" alt="Projet 2 - aperçu 2">
+                            </div>
+                            <button class="carousel-btn next" aria-label="Image suivante">&#8250;</button>
+                            <div class="carousel-dots"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p3-right">
+                    <span class="p3-label">Mes projets</span>
+                    <div class="proj-info">
+                        <h2 class="proj-name"></h2>
+                        <p class="proj-desc"></p>
+                        <div class="proj-stack"></div>
+                        <a class="proj-link cv-btn" href="#" target="_blank">Voir le projet →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="page4">
+            <h1>Ma stack</h1>
+            <div class="stack-grid">
+
+                <div class="stack-category">
+                    <h2>Langages &amp; Frameworks</h2>
+                    <div class="tech-cards">
+                        <div class="tech-card"><i class="devicon-express-original"></i><span>Express.js</span></div>
+                        <div class="tech-card"><i class="devicon-nodejs-plain colored"></i><span>Node.js</span></div>
+                        <div class="tech-card"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+                        <div class="tech-card"><i class="devicon-java-plain colored"></i><span>Java</span></div>
+                        <div class="tech-card"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+                    </div>
+                </div>
+
+                <div class="stack-category">
+                    <h2>Base de données</h2>
+                    <div class="tech-cards">
+                        <div class="tech-card"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
+                        <div class="tech-card"><i class="devicon-postgresql-plain colored"></i><span>PostgreSQL</span></div>
+                        <div class="tech-card"><i class="devicon-redis-plain colored"></i><span>Redis</span></div>
+                    </div>
+                </div>
+
+                <div class="stack-category">
+                    <h2>Outils</h2>
+                    <div class="tech-cards">
+                        <div class="tech-card"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+                        <div class="tech-card"><i class="devicon-github-original"></i><span>GitHub</span></div>
+                        <div class="tech-card"><i class="devicon-debian-plain colored"></i><span>Debian</span></div>
+                        <div class="tech-card"><i class="devicon-docker-plain colored"></i><span>Docker</span></div>
+                        <div class="tech-card"><i class="devicon-vscode-plain colored"></i><span>VS Code</span></div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </body>
 </html>
